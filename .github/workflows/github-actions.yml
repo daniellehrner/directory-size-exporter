@@ -27,6 +27,8 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           arguments: installDist
+      - name: Compress
+        if: startsWith(github.ref, 'refs/tags/')
         run: cd ./build/install && tar -zcvf ../../directory-size-exporter.tar.gz directory-size-exporter && cd ../..
       - name: Release
         uses: softprops/action-gh-release@v1
