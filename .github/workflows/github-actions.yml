@@ -30,4 +30,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: build/install/*
+          files: build/install/directory-size-exporter
