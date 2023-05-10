@@ -1,0 +1,6 @@
+{
+  "directories": [
+    "/var/lib/besu",
+    "/var/lib/teku"
+  ]
+}

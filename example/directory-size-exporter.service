@@ -1,0 +1,15 @@
+[Unit]
+Description=Exports size of directories to Prometheus
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=prometheus
+Group=prometheus
+Restart=always
+RestartSec=5
+ExecStart=<PATH_TO_DOWNLOAD>/bin/directory-size-exporter <PATH_TO_CONFIG>/directory-size-exporter.json
+
+[Install]
+WantedBy=multi-user.target
